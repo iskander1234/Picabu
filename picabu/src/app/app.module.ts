@@ -8,6 +8,10 @@ import {AddNewsComponent} from './addnews/addnews.component';
 import {FormsModule} from '@angular/forms';
 import {ContentComponent} from './content/content.component';
 import {LoginComponent} from './ authentication/login.component';
+import {HotterComponent} from './hotter/hotter.component';
+import {RouterModule} from '@angular/router';
+import {routes} from './app.route';
+import {WelcomeComponent} from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +19,15 @@ import {LoginComponent} from './ authentication/login.component';
     HeaderComponent,
     AddNewsComponent,
     ContentComponent,
-    LoginComponent
+    LoginComponent,
+    HotterComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes, {useHash: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
