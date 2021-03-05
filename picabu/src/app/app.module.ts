@@ -12,6 +12,7 @@ import {HotterComponent} from './hotter/hotter.component';
 import {RouterModule} from '@angular/router';
 import {routes} from './app.route';
 import {WelcomeComponent} from './welcome/welcome.component';
+import {CommunitiesComponent} from './communities/communities.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {WelcomeComponent} from './welcome/welcome.component';
     ContentComponent,
     LoginComponent,
     HotterComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    CommunitiesComponent
   ],
   imports: [
     BrowserModule,
