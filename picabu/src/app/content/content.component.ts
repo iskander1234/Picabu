@@ -5,5 +5,7 @@ import { Component , Input} from '@angular/core';
   templateUrl: './content.component.html',
 })
 export class ContentComponent {
+  fullName : string = 'Iskander Dosgali';
+  createData : Date = new Date();
   @Input() contentItem!: {title: string, description: string};
 }
