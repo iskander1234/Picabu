@@ -5,4 +5,5 @@ import { Component , Input} from '@angular/core';
   templateUrl: './welcome.component.html',
 })
 export class WelcomeComponent {
+  createData : Date = new Date();
 }
