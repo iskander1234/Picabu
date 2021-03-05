@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+
+
+  <div>
+  <h2 class="text-center mt-4">{{title | uppercase}}</h2>
+  <table class="mt-4" style="width: 775px;">
+    <tr>
+      <th>Фото</th>
+      <th>Наименования</th>
+      <th>Описание</th>
+    </tr>
+    <tr *ngFor="let com of communitiess">
+      <td><img src="{{com.fileName}}" alt=""></td>
+      <td>{{com.communitiesName}}</td>
+      <td>{{com.descriptions}}</td>
+    </tr>
+  </table>
+  </div>
+  <app-login></app-login>
+  </div>
+</div>
+
+
