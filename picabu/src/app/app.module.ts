@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,10 @@ import {routes} from './app.route';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {CommunitiesComponent} from './communities/communities.component';
 
+import { ServiceComponent } from './search/service/service.component';
+import {NewServiceServiceComponent} from './search/new-service.service/new-service.service.component';
+import {NewServiceService} from './search/new-service.service/new-services.services';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,15 +28,17 @@ import {CommunitiesComponent} from './communities/communities.component';
     LoginComponent,
     HotterComponent,
     WelcomeComponent,
-    CommunitiesComponent
+    CommunitiesComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes, {useHash: true})
   ],
-  providers: [],
+  providers: [NewServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
