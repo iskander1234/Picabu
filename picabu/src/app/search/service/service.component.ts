@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NewServiceService} from '../new-service.service/new-services.services';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-service',
@@ -21,7 +21,9 @@ export class ServiceComponent{
         this.response = response;
         console.log(this.response);
     })
+
     //toddmotto
     //angular
+
   }
 }

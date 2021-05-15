@@ -1,0 +1,24 @@
+<!--<ul>-->
+<!--  <li *ngFor="let user of users">-->
+<!--    <app-the-best [user]="user" (userSeelcted)="selectUser = user"></app-the-best>-->
+<!--  </li>-->
+<!--</ul>-->
+
+<!--<h1>{{userSeelcted?.name}}</h1>-->
+
+<div class="container">
+  <div class="row">
+    <div>
+      <h2 class="text-center mt-4">Лушие люди</h2>
+      <table class="mt-4" style="width: 775px;">
+        <tr>
+          <th>Name</th>
+        </tr>
+        <tr *ngFor="let user of users">
+          <td>{{user.name}}</td>
+        </tr>
+      </table>
+    </div>
+    <app-login></app-login>
+  </div>
+</div>

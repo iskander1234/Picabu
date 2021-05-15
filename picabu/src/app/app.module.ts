@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {AddNewsComponent} from './addnews/addnews.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ContentComponent} from './content/content.component';
 import {LoginComponent} from './ authentication/login.component';
 import {HotterComponent} from './hotter/hotter.component';
@@ -16,8 +16,8 @@ import {WelcomeComponent} from './welcome/welcome.component';
 import {CommunitiesComponent} from './communities/communities.component';
 
 import { ServiceComponent } from './search/service/service.component';
-import {NewServiceServiceComponent} from './search/new-service.service/new-service.service.component';
 import {NewServiceService} from './search/new-service.service/new-services.services';
+import {TheBestComponent} from './ theBest/the-best.component';
 
 @NgModule({
   declarations: [
@@ -29,16 +29,18 @@ import {NewServiceService} from './search/new-service.service/new-services.servi
     HotterComponent,
     WelcomeComponent,
     CommunitiesComponent,
-    ServiceComponent
+    ServiceComponent,
+    TheBestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes, {useHash: true})
+    RouterModule.forRoot(routes, {useHash: true}),
+    ReactiveFormsModule
   ],
-  providers: [NewServiceService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [NewServiceService]
 })
 export class AppModule { }
