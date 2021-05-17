@@ -1,11 +1,26 @@
-User name: <input type="text" [(ngModel)]="userName">
-
 <div class="container">
-  <button (click)="search()">Search</button>
-<div *ngIf="response">
-  <img src="{{response.avatar_url}}" alt="">
-  <p>Имя: {{response.login}}</p>
-  <p>Repository: {{response.public_repos}}</p>
-  <p>BOI: {{response.bio}}</p>
-</div>
+  <div class="row">
+    <div style="width: 490px">
+      <h2 style="text-align: center" class="mt-5">Search - Service</h2>
+      <div>
+        <input type="text" [(ngModel)]="userName" class="mt-5" style="width: 100%;" placeholder="Enter user name">
+        <button style="margin-top: 10px; width: 100%;" (click)="search()" class="btn btn-primary">Search</button>
+      </div>
+
+
+      <div class="card" *ngIf="response" style="    width: 400px;
+    margin-left: 275px;
+    margin-top: 40px;">
+        <img class="card-img-top" src="{{response.avatar_url}}" style="width: 405px;
+    height: 250px;" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title" style="text-align: center">Имя: {{response.login}}</h5>
+          <p class="card-text" style="text-align: center">Repository: {{response.public_repos}}</p>
+          <p class="card-text" style="text-align: center">Site_admin: {{response.site_admin}}</p>
+        </div>
+      </div>
+    </div>
+
+  <app-login style="margin-left: 300px;"></app-login>
+  </div>
 </div>

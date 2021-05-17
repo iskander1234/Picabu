@@ -11,11 +11,21 @@
     <div>
       <h2 class="text-center mt-4">Лушие люди</h2>
       <table class="mt-4" style="width: 775px;">
-        <tr>
-          <th>Name</th>
+        <tr class="table-active">
+          <th scope="col">#</th>
+          <th>Фотография</th>
+          <th>Имя</th>
+          <th>Возраст</th>
+          <th>О человеке</th>
+          <th>Временя</th>
         </tr>
-        <tr *ngFor="let user of users">
+        <tr *ngFor="let user of users" class="table-success">
+          <th scope="row">{{user.check}} </th>
+          <td><img src="{{user.img}}" alt="" style="width: 120px; height: 120px;"></td>
           <td>{{user.name}}</td>
+          <td>{{user.age}}</td>
+          <td>{{user.about}}</td>
+          <td>{{user.toDate | date}}</td>
         </tr>
       </table>
     </div>

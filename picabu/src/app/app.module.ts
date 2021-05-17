@@ -18,6 +18,8 @@ import {CommunitiesComponent} from './communities/communities.component';
 import { ServiceComponent } from './search/service/service.component';
 import {NewServiceService} from './search/new-service.service/new-services.services';
 import {TheBestComponent} from './ theBest/the-best.component';
+import {MyModuleModule} from './moduls/my-module/my-module.module';
+import { FreshComponent } from './fresh/fresh.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import {TheBestComponent} from './ theBest/the-best.component';
     WelcomeComponent,
     CommunitiesComponent,
     ServiceComponent,
-    TheBestComponent
+    TheBestComponent,
+    FreshComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import {TheBestComponent} from './ theBest/the-best.component';
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes, {useHash: true}),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MyModuleModule
   ],
   bootstrap: [AppComponent],
   providers: [NewServiceService]
